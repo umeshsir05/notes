@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -12,19 +12,20 @@
   <link rel="stylesheet" href="css_contact.css">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* छोटा इनलाइन स्टाइल — अगर आपकी CSS मौजूद है तो यह ओवरराइड हो सकता है */
-    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; padding:0; background:#f7f7f7; color:#222; }
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f7f7; color:#222; }
     header { background:#fff; padding:12px 16px; box-shadow:0 1px 4px rgba(0,0,0,.06); display:flex; align-items:center; justify-content:space-between; }
     .logo h1 { margin:0; font-size:18px; }
     .nav-menu ul { list-style:none; margin:0; padding:0; display:flex; gap:12px; }
     .nav-menu a { text-decoration:none; color:#222; font-size:14px; }
-    main { max-width:900px; margin:28px auto; padding:0 16px; background:#fff; border-radius:6px; box-shadow:0 4px 20px rgba(12,12,12,0.04); }
-    main > * { padding:16px; }
-    .contact-form input, .contact-form textarea { width:100%; padding:10px; margin:8px 0; border:1px solid #ddd; border-radius:4px; font-size:15px; box-sizing:border-box; }
-    .contact-form button { padding:10px 14px; border:none; border-radius:4px; cursor:pointer; background:#2b7de9; color:#fff; font-size:15px; }
-    .msg { text-align:center; margin:12px 0; }
+    .menu-toggle { display:none; cursor:pointer; font-size:20px; }
+    main { max-width:900px; margin:28px auto; padding:24px; background:#fff; border-radius:6px; box-shadow:0 4px 20px rgba(0,0,0,0.04); text-align:center; }
     footer { background:#333; color:#fff; text-align:center; padding:12px 0; margin-top:18px; }
-    .small-note { font-size:13px; color:#555; text-align:center; padding-bottom:12px; }
+    a { color:#2b7de9; text-decoration:none; }
+    @media (max-width: 768px) {
+      .nav-menu ul { flex-direction:column; display:none; }
+      .nav-menu.active ul { display:flex; }
+      .menu-toggle { display:block; }
+    }
   </style>
 </head>
 <body>
@@ -40,124 +41,31 @@
         <li><a href="admin.html"><i class="fa fa-user-shield"></i> Admin</a></li>
       </ul>
     </nav>
+    <div class="menu-toggle">
+      <span>&#9776;</span>
+    </div>
   </header>
 
   <main>
-    <h2 style="text-align:center; margin:0; padding-top:12px;">Contact Me</h2>
-
-    <p style="text-align:center;" class="small-note">
-      अगर आप मुझसे संपर्क करना चाहते हैं तो नीचे फॉर्म भरें।<br>
-      Email: <a href="mailto:kumarbanjare981@gmail.com">kumarbanjare981@gmail.com</a> · Website: <a href="https://banjaresir.infy.uk" target="_blank" rel="noopener">banjaresir.infy.uk</a>
+    <h2>Contact Me</h2>
+    <p>If you have any questions, feel free to reach out:</p>
+    <p>
+      📧 Email: <a href="mailto:kumarbanjare981@gmail.com">kumarbanjare981@gmail.com</a><br>
+      🌐 Website: <a href="https://banjaresir.infy.uk" target="_blank" rel="noopener">https://banjaresir.infy.uk</a>
     </p>
-
-    <form id="contactForm" class="contact-form" novalidate>
-      <label class="sr-only" for="name">Your Name</label>
-      <input id="name" name="name" type="text" placeholder="Your Name" required>
-
-      <label class="sr-only" for="email">Your Email</label>
-      <input id="email" name="email" type="email" placeholder="Your Email" required>
-
-      <label class="sr-only" for="message">Your Message</label>
-      <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
-
-      <div style="text-align:center;">
-        <button type="submit">Submit</button>
-      </div>
-    </form>
-
-    <div id="response" class="msg" aria-live="polite"></div>
-
-    <div style="padding:16px; text-align:center;">
-      <button id="downloadBtn" style="padding:8px 12px; border-radius:4px;">Download saved messages (JSON)</button>
-      <button id="clearBtn" style="padding:8px 12px; border-radius:4px; margin-left:8px;">Clear saved messages</button>
-    </div>
   </main>
 
   <footer>
     <p>&copy; <strong>2025 Banjare Sir Classes. All rights reserved. Developed by Umesh Banjare.</strong></p>
   </footer>
 
-  <!-- Your script.js can remain, but below script handles contact storage for static HTML -->
   <script>
-    (function(){
-      const form = document.getElementById('contactForm');
-      const responseDiv = document.getElementById('response');
-
-      function getStoredContacts() {
-        try {
-          return JSON.parse(localStorage.getItem('banjare_contacts') || '[]');
-        } catch (e) {
-          return [];
-        }
-      }
-
-      function saveContact(contact) {
-        const arr = getStoredContacts();
-        arr.push(contact);
-        localStorage.setItem('banjare_contacts', JSON.stringify(arr));
-      }
-
-      form.addEventListener('submit', function(e){
-        e.preventDefault();
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
-
-        // Basic validation
-        if (!name || !email || !message) {
-          responseDiv.style.color = 'red';
-          responseDiv.textContent = 'कृपया सभी फ़ील्ड भरें।';
-          return;
-        }
-
-        // Save to localStorage (static hosting friendly)
-        const contact = {
-          name, email, message,
-          timestamp: new Date().toISOString()
-        };
-
-        try {
-          saveContact(contact);
-          responseDiv.style.color = 'green';
-          responseDiv.textContent = '✅ आपका संदेश सुरक्षित हो गया। धन्यवाद!';
-
-          // clear form
-          form.reset();
-        } catch (err) {
-          console.error(err);
-          responseDiv.style.color = 'red';
-          responseDiv.textContent = '❌ कुछ गलत हुआ — कृपया बाद में फिर से प्रयास करें।';
-        }
-      });
-
-      // Download saved messages as JSON
-      document.getElementById('downloadBtn').addEventListener('click', function(){
-        const arr = getStoredContacts();
-        if (!arr.length) {
-          alert('कोई संदेश नहीं मिला।');
-          return;
-        }
-        const blob = new Blob([JSON.stringify(arr, null, 2)], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'contacts.json';
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-        URL.revokeObjectURL(url);
-      });
-
-      // Clear saved messages
-      document.getElementById('clearBtn').addEventListener('click', function(){
-        if (!confirm('क्या आप वाकई सभी saved messages हटाना चाहते हैं?')) return;
-        localStorage.removeItem('banjare_contacts');
-        alert('Saved messages हटा दिए गए।');
-      });
-    })();
+    // Mobile menu toggle
+    const toggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector(".nav-menu");
+    toggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
   </script>
-
-  <!-- Optional: include your external script file last -->
-  <script src="script.js"></script>
 </body>
 </html>
