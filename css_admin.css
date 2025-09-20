@@ -1,0 +1,50 @@
+ @charset "utf-8";
+/* CSS Document */
+/* Login Form Styles */
+main {
+    padding: 40px 20px;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #f39c12;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e67e22;
+}
+
+p {
+    font-size: 1rem;
+}
+
+a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e67e22;
+}
