@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Umesh Banjare sir Classes</title>
     <!-- Font Awesome CDN for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="script.js">
 </head>
@@ -16,16 +15,15 @@
             <h1>Banjare Sir Classes</h1>
         </div>
         <nav class="nav-menu">
-    <ul>
-        <li><a href="index.php"><i class="fa fa-home"></i> Home</a></li>
-        <li><a href="about.php"><i class="fa fa-user"></i> About</a></li>
-        <li><a href="notes.php"><i class="fa fa-book-open"></i> Class-9th</a></li>
-        <li><a href="notes-10th.php"><i class="fa fa-book"></i> Class-10th</a></li>
-        <li><a href="contact.php"><i class="fa fa-envelope"></i> Contact</a></li>
-        <li><a href="admin.php"><i class="fa fa-user-shield"></i> Admin</a></li>
-    </ul>
-</nav>
-
+            <ul>
+                <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fa fa-user"></i> About</a></li>
+                <li><a href="notes.html"><i class="fa fa-book-open"></i> Class-9th</a></li>
+                <li><a href="notes-10th.html"><i class="fa fa-book"></i> Class-10th</a></li>
+                <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+                <li><a href="admin.html"><i class="fa fa-user-shield"></i> Admin</a></li>
+            </ul>
+        </nav>
 
         <div class="menu-toggle">
             <span>&#9776;</span>
@@ -33,71 +31,70 @@
     </header>
     <main>
         <section class="hero">
-        <div class="container">
-            <h1>Welcome to Banjare sir classes</h1>
-            <p>Master the art of web developing and programming  with our comprehensive courses, practice tools, and downloadable notes. Start your journey today!</p>
-            <a href="notes.php" class="btn-primary">Explore Courses</a>
-        </div>
-    </section>
+            <div class="container">
+                <h1>Welcome to Banjare sir classes</h1>
+                <p>Master the art of web developing and programming with our comprehensive courses, practice tools, and downloadable notes. Start your journey today!</p>
+                <a href="notes.html" class="btn-primary">Explore Courses</a>
+            </div>
+        </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2>Why Choose Banjare sir classes?</h2>
-            <div class="features-list">
-                <div class="feature">
-                    <h3>Comprehensive Courses</h3>
-                    <p>Tailored for beginners to advanced learners, covering all aspects of web developing and programming.</p>
-                </div>
-                <div class="feature">
-                    <h3>Downloadable Notes</h3>
-                    <p>Access high-quality notes to reinforce your learning and improve your skills.</p>
-                </div>
-                <div class="feature">
-                    <h3>Interactive Practice</h3>
-                    <p>Engage in web developing, programming, and coding to achieve Interactive practice.</p>
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2>Why Choose Banjare sir classes?</h2>
+                <div class="features-list">
+                    <div class="feature">
+                        <h3>Comprehensive Courses</h3>
+                        <p>Tailored for beginners to advanced learners, covering all aspects of web developing and programming.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Downloadable Notes</h3>
+                        <p>Access high-quality notes to reinforce your learning and improve your skills.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Interactive Practice</h3>
+                        <p>Engage in web developing, programming, and coding to achieve Interactive practice.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
     </main>
-  <!-- Wishing Text Box -->
-  <div id="festivalWish" style="display:none; 
-       text-align:center; 
-       font-size:24px; 
-       font-weight:bold; 
-       margin-top:20px; 
-       color:#2c3e50;">
-  </div>
 
-  <!-- JS File Link -->
-  <script src="confetti.js?v=<?php echo time(); ?>"></script>
+    <!-- Wishing Text Box -->
+    <div id="festivalWish" style="display:none; 
+        text-align:center; 
+        font-size:24px; 
+        font-weight:bold; 
+        margin-top:20px; 
+        color:#2c3e50;">
+    </div>
 
- <footer style="background-color:#333;color:#fff;text-align:center;padding:10px 0;width:100%;">
-  <p>&copy; <b>2025 Banjare sir Classes. All rights reserved. Developed by Umesh Banjare.</b></p>
-  <p>Total Visitors: <span id="totalVisitors">Loading...</span></p>
-  <p>Today's Visitors: <span id="todayVisitors">Loading...</span></p>
-</footer>
+    <!-- JS File Link -->
+    <script src="confetti.js"></script>
 
-<script>
-(function () {
-  function updateCounter() {
-    fetch("fetch_counter.php?ts=" + Date.now(), { cache: "no-store" })
-      .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-      .then(d => {
-        document.getElementById("totalVisitors").textContent = (d.total ?? "-");
-        document.getElementById("todayVisitors").textContent = (d.today ?? "-");
-      })
-      .catch(err => {
-        console.log("Counter error:", err);
-        // चाहें तो UI पर भी दिखा दें:
-        // document.getElementById("todayVisitors").textContent = "—";
-      });
-  }
-  updateCounter();
-  setInterval(updateCounter, 5000);
-})();
-</script>
+    <footer style="background-color:#333;color:#fff;text-align:center;padding:10px 0;width:100%;">
+        <p>&copy; <b>2025 Banjare sir Classes. All rights reserved. Developed by Umesh Banjare.</b></p>
+        <p>Total Visitors: <span id="totalVisitors">Loading...</span></p>
+        <p>Today's Visitors: <span id="todayVisitors">Loading...</span></p>
+    </footer>
+
+    <script>
+    (function () {
+      function updateCounter() {
+        fetch("fetch_counter.php?ts=" + Date.now(), { cache: "no-store" })
+          .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+          .then(d => {
+            document.getElementById("totalVisitors").textContent = (d.total ?? "-");
+            document.getElementById("todayVisitors").textContent = (d.today ?? "-");
+          })
+          .catch(err => {
+            console.log("Counter error:", err);
+          });
+      }
+      updateCounter();
+      setInterval(updateCounter, 5000);
+    })();
+    </script>
 
     <script src="script.js"></script>
 </body>
