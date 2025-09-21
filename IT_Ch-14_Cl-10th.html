@@ -1,3 +1,4 @@
+ <?php //include"Protect.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,181 +7,162 @@
     <title>Umesh Banjare sir Classes</title>
     
     <!-- Font Awesome CDN for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .correct-answer { color: green; font-weight: bold; }
-    </style>
 </head>
 <body>
 <header>
-    <div class="logo">
-        <h1>Class-10th(IT)</h1>
-    </div>
-    <nav class="nav-menu">
-        <ul>
-            <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="about.html"><i class="fa fa-user"></i> About</a></li>
-            <li><a href="notes.html"><i class="fa fa-book-open"></i> Class-9th</a></li>
-            <li><a href="notes-10th.html"><i class="fa fa-book"></i> Class-10th</a></li>
-            <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
-            <li><a href="admin.html"><i class="fa fa-user-shield"></i> Admin</a></li>
-        </ul>
-    </nav>
-    <div class="menu-toggle">
-        <span>&#9776;</span>
-    </div>
+        <div class="logo">
+            <h1>Class-10th(IT)</h1>
+        </div>
+        <nav class="nav-menu">
+    <ul>
+        <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fa fa-user"></i> About</a></li>
+        <li><a href="notes.html"><i class="fa fa-book-open"></i> Class-9th</a></li>
+        <li><a href="notes-10th.html"><i class="fa fa-book"></i> Class-10th</a></li>
+        <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+        <li><a href="admin.html"><i class="fa fa-user-shield"></i> Admin</a></li>
+    </ul>
+</nav>
+        <div class="menu-toggle">
+            <span>&#9776;</span>
+        </div>
 </header>
-
 <main>
-    <h2 align="center">Chapter – 14: Linking, Sharing and Macros in Calc</h2>
+  
+ <strong><h2 align="center">Chapter – 14</strong><br> <br>
+    <u>Linking, Sharing and Macros in Calc </u></h2></strong><br><br>
+  
 
-    <section>
-        <h3>I. Multiple Choice Questions (MCQs)</h3>
-        <ol>
-            <li>Which of these menus contains the option to enable sharing of a Calc spreadsheet?
-                <ul>
-                    <li>a. Edit menu</li>
-                    <li>b. Sheet menu</li>
-                    <li class="correct-answer">c. Tools menu ✔</li>
-                    <li>d. Data menu</li>
-                </ul>
-            </li>
-            <li>Which of these help us manage multiple sheets in a spreadsheet file?
-                <ul>
-                    <li>a. Menus</li>
-                    <li class="correct-answer">b. Sheet tabs ✔</li>
-                    <li>c. Navigation buttons</li>
-                    <li>d. Toolbars</li>
-                </ul>
-            </li>
-            <li>Which menu contains track changes options in LibreOffice Calc?
-                <ul>
-                    <li>a. File menu</li>
-                    <li class="correct-answer">b. Tools menu ✔</li>
-                    <li>c. View menu</li>
-                    <li>d. Edit menu</li>
-                </ul>
-            </li>
-            <li>To insert a sheet in a spreadsheet file, right click on a sheet tab and select ________ option.
-                <ul>
-                    <li>a. Add Sheet</li>
-                    <li class="correct-answer">b. Insert Sheet ✔</li>
-                    <li>c. New Sheet</li>
-                    <li>d. Calc Sheet</li>
-                </ul>
-            </li>
-            <li>Which is the correct formula for creating a cell reference?
-                <ul>
-                    <li class="correct-answer">a. ='Sheet Name'.Cell_reference ✔</li>
-                    <li>b. ='Spreadsheet Name'.Cell_reference</li>
-                    <li>c. ='Sheet Name';Cell_reference</li>
-                    <li>d. ='Spreadsheet Name';Cell_reference</li>
-                </ul>
-            </li>
-            <li>Which of the following is a valid way to add a sheet to a Calc file?
-                <ul>
-                    <li class="correct-answer">a. Click on Add Sheet button ✔</li>
-                    <li>b. Select Insert Sheet from menu bar</li>
-                    <li>c. Both (a) and (b)</li>
-                    <li>d. Neither (a) nor (b)</li>
-                </ul>
-            </li>
-            <li>A hyperlink stops working when only its target is moved. What type of hyperlink is it?
-                <ul>
-                    <li>a. Relative link</li>
-                    <li class="correct-answer">b. Absolute link ✔</li>
-                    <li>c. Data link</li>
-                    <li>d. None of these</li>
-                </ul>
-            </li>
-            <li>Each user collaborating should enter a name on which page?
-                <ul>
-                    <li class="correct-answer">a. Tools → Options → LibreOffice User Data page ✔</li>
-                    <li>b. Tools → Options → LibreOffice Macros</li>
-                    <li>c. Tools → Options → LibreOffice Security</li>
-                    <li>d. None of these</li>
-                </ul>
-            </li>
-            <li>Arguments passed to a macro from Calc are always:
-                <ul>
-                    <li>a. Objects</li>
-                    <li>b. Addresses</li>
-                    <li class="correct-answer">c. Values ✔</li>
-                    <li>d. Formulas</li>
-                </ul>
-            </li>
-            <li>If you disable macros, which happens?
-                <ul>
-                    <li class="correct-answer">a. Calc will not be able to find and call macro-based function ✔</li>
-                    <li>b. Calc will still be able to find and call macro-based functions</li>
-                    <li>c. Calc will find but not execute the functions</li>
-                    <li>d. None of these</li>
-                </ul>
-            </li>
-        </ol>
-    </section>
+  <strong>1. Multiple Choice Questions (MCQs). Tick (✔) the correct answer.</strong><br>
 
-    <section>
-        <h3>II. Fill in the blanks</h3>
-        <ol>
-            <li>By default, a new spreadsheet has one sheet named <u><strong>Sheet1</strong></u>.</li>
-            <li>To open the <u><strong>Insert Sheet</strong></u> dialog, click in the empty space to the right of sheet tabs.</li>
-            <li>LibreOffice Calc allows multiple users to open the same <u><strong>spreadsheet</strong></u> for editing.</li>
-            <li>The <u><strong>Link</strong></u> option in Insert Sheet inserts an external sheet as a link instead of a copy.</li>
-            <li><u><strong>Renaming</strong></u> sheets gives them meaningful names.</li>
-            <li>We can create <u><strong>references</strong></u> from one sheet to another using keyboard and mouse.</li>
-            <li>Always put a <u><strong>dot (.)</strong></u> between sheet name and cell reference in formulas.</li>
-            <li>A <u><strong>relative</strong></u> hyperlink contains an address relative to the destination file.</li>
-            <li>Tools → <u><strong>Share Spreadsheet</strong></u> switches a document from unshared to shared.</li>
-            <li>A <u><strong>macro</strong></u> is a saved sequence of commands or keystrokes stored for later use.</li>
-        </ol>
-    </section>
 
-    <section>
-        <h3>III. Short Answer Questions</h3>
-        <ol>
-            <li><strong>How will you insert a new blank sheet?</strong><br>
-                Sheet menu → Insert Sheet → Choose position → OK.<br>
-                Or, right-click existing sheet tab → Insert Sheet → OK.
-            </li>
-            <li><strong>How to insert sheets from another spreadsheet?</strong><br>
-                Insert → Sheet from File → Select file → Choose sheets → OK.
-            </li>
-            <li><strong>How to rename a sheet?</strong><br>
-                Right-click sheet tab → Rename Sheet → Type new name → OK.
-            </li>
-            <li><strong>What does track changes feature do?</strong><br>
-                Records, views, and manages edits, deletions, and formatting updates in a spreadsheet.
-            </li>
-            <li><strong>What are macros?</strong><br>
-                Recorded sequence of commands/keystrokes to automate tasks.
-            </li>
-            <li><strong>How to record and run a macro?</strong><br>
-                <strong>Record:</strong> Tools → Macros → Record Macro → Perform steps → Stop & save.<br>
-                <strong>Run:</strong> Tools → Macros → Run Macro → Select macro → Run.
-            </li>
-            <li><strong>How to enable/disable track changes?</strong><br>
-                Edit → Track Changes → Record → Click to enable/disable.
-            </li>
-            <li><strong>How to link to a registered data source?</strong><br>
-                View → Data Sources → Data Source Explorer → Select source → Drag fields into spreadsheet.
-            </li>
-            <li><strong>What does ‘arguments in a Calc macro are passed as values’ mean?</strong><br>
-                A copy of the data is passed, not the original cell reference.
-            </li>
-            <li><strong>How to change a document from unshared to shared and vice versa?</strong><br>
-                Tools → Share Spreadsheet → Check/uncheck Share option → OK.
-            </li>
-        </ol>
-    </section>
+I. Multiple Choice Questions (MCQs). Tick (✓) the correct answer.<br>
+1.	Which of these menus contains the option to enable sharing of a Calc spreadsheet?<br>
+a. Edit menu<br>
+b. Sheet menu<br>
+<strong>✓ c. Tools menu</strong><br>
+d. Data menu<br>
+2.	Which of these help us to manage multiple sheets in a spreadsheet file?<br>
+a. Menus<br>
+<strong>✓ b. Sheet tabs</strong><br>
+c. Navigation buttons<br>
+d. Toolbars<br>
+3.	Which menu contains track changes related options in LibreOffice Calc?<br>
+a. File menu<br>
+<strong>✓ b. Tools menu</strong><br>
+c. View menu<br>
+d. Edit menu<br><br>
+4.	To insert a sheet in a spreadsheet file, right click on a sheet tab and from the context menu select the ________ option.<br>
+a. Add Sheet<br>
+<strong>✓ b. Insert Sheet</strong><br>
+c. New Sheet<br>
+d. Calc Sheet<br><br>
+5.	Which is the correct formula for creating cell reference?<br>
+<strong>✓ a. ='Sheet Name'.Cell_reference</strong><br>
+b. ='Spreadsheet Name'.Cell_reference<br>
+c. ='Sheet Name';Cell_reference<br>
+d. ='Spreadsheet Name';Cell_reference<br><br>
 
+6.	Which of the following is a valid way to add a sheet to a Calc file?<br>
+<strong>✓ a. Click on Add Sheet button</strong><br>
+b. Select Insert Sheet from menu bar<br>
+c. Both (a) and (b)<br>
+d. Neither (a) nor (b)<br><br>
+
+7.	A hyperlink stops working when only its target is moved to a different location. What type of hyperlink it most likely is?<br>
+a. Relative link<br>
+<strong>✓ b. Absolute link</strong><br>
+c. Data link<br>
+d. None of these<br><br>
+
+8.	Each user who wants to collaborate should be sure to enter a name on which of the following?<br>
+<strong>✓ a. Tools Options LibreOffice User Data page</strong><br>
+b. Tools Options LibreOffice Macros<br>
+c. Tools Options LibreOffice Security<br>
+d. None of these<br><br>
+
+9.	Arguments passed to a macro from Calc are always:<br>
+a. Objects<br>
+b. Addresses<br>
+<strong>✓ c. Values</strong><br>
+d. Formulas<br><br>
+
+10.	If you choose to disable macros, then which of the following is most likely to happen?<br>
+<strong>✓ a. Calc will not be able to find and call macro based function</strong><br>
+b. Calc will still be able to find and call macro based functions<br>
+c. Calc will find but will not be able to execute the functions<br>
+d. None of these will likely to happen<br><br>
+
+<strong>II. Fill in the blanks to complete the following sentences:</strong><br>
+1.	When we open a new spreadsheet it has, by default, one sheet named as <u><strong>Sheet1.</strong></u><strong></strong><br>
+2.	To open the <u><strong>Insert Sheet</strong></u> dialog box, click anywhere in the empty space to the right of the sheet tab/s.<br>
+3.	LibreOffice Calc allows a number of users at a time to open a same<u><strong> spreadsheet</strong></u> for viewing and editing.<br>
+4.<u><strong> Link</strong></u> option in the Insert Sheet dialog box can be used to insert the external sheet as a link instead of a copy.<br>
+5.	<u><strong>Renaming</strong></u> of sheets is often required in order to give them a more meaningful name.<br>
+6.	We can easily create<u><strong> references</strong></u> of the cells of one sheet on to a second sheet using both the keyboard and mouse.<br>
+7.	Always remember to put a <u><strong>dot (.)</strong></u> mark between the sheet name and cell reference in a reference formula.<br>
+8.	A <u><strong>relative</strong></u> hyperlink is a hyperlink that contains an address that is relative to the address of the destination file.<br>
+9.	The Tools<u><strong> Share Spreadsheet</strong></u> command can be used to switch the mode for a document from unshared to shared.<br>
+10.	A<u><strong> macro</strong></u> is a saved sequence of commands or keystrokes that are stored for later use.<br><br>
+
+<strong>III. Short Answer Questions:</strong><br><br>
+<strong>1.How will you insert a new blank sheet into a Calc document?<br>
+Answer - </strong><br>
+Go to Sheet menu → Click Insert Sheet → Choose the position and click OK.<br>
+Or, right-click on an existing sheet tab → Select Insert Sheet → Click OK.<br><br>
+
+<strong>2.How will you insert sheets from another spreadsheet into your Calc file?<br>
+Answer -</strong><br>
+Go to Insert menu → Click Sheet from File → Select the spreadsheet file → Choose the required sheets → Click OK.<br><br>
+
+<strong>3.How will you rename a sheet? Write the complete steps.<br>
+Answer - </strong><br>
+Right-click on the sheet tab → Select Rename Sheet → Type the new name → Click OK.<br><br>
+
+<strong>4.What does the track changes feature help you to do in Calc?<br>
+Answer -</strong><br>
+It helps to record, view, and manage all changes made in a spreadsheet, including edits, deletions, and formatting updates.<br><br>
+
+<strong>5.What do you understand by macros?<br>
+Answer - </strong><br>
+A macro is a recorded sequence of commands or keystrokes used to automate repetitive tasks in Calc.<br><br>
+
+<strong>6.How will you record and run a macro?<br>
+Answer - </strong><br>
+<strong>To record: </strong><br>
+1.	Go to Tools → Macros → Record Macro.<br>
+2.	Perform the steps you want to record.<br>
+3.	Click Stop Recording and save the macro.<br>
+<strong>To run: </strong><br>
+4.	Go to Tools → Macros → Run Macro.<br>
+5.	Select the macro and click Run.<br><br>
+
+<strong>7.How can you enable and disable the track changes feature in a Calc spreadsheet?<br>
+Answer - </strong><br>
+Go to Edit → Track Changes → Record → Click to enable or disable tracking.<br><br>
+
+<strong>8.How can you link your spreadsheet to a registered data source?<br>
+Answer - </strong><br>
+Go to View → Data Sources → Click Data Source Explorer → Select the data source → Drag required fields into the spreadsheet.<br>
+<br>
+
+<strong>9.What do you understand by the statement ‘arguments in a Calc macro are passed as values’?</strong><br>
+<strong>Answer - </strong><br>
+It means when you pass an argument to a macro, a copy of the data is passed instead of the original cell reference.<br><br>
+
+<strong>10.How can you change the status of a document from unshared to shared and vice versa?<br>
+Answer -</strong><br>
+Go to Tools → Share Spreadsheet → Check or uncheck the Share this spreadsheet with other users option → Click OK.<br>
+ <br>
+<br><br>
 </main>
 
-<footer style="background-color: #333; color: #fff; text-align: center; padding: 10px 0; width: 100%;">
-    <p>&copy; <b>2025 Umesh Banjare. All rights reserved. Developed by Umesh Banjare.</b></p>
+    <footer style="background-color: #333; color: #fff; text-align: center; padding: 10px 0; width: 100%;">
+        <p>&copy; <b>2025 Umesh Banjare. All rights reserved. Developed by Umesh Banjare.</b></p>
 </footer>
 
 <script src="script.js" defer></script>
 </body>
-</html>
+</html
