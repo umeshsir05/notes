@@ -1,234 +1,134 @@
-<?php include "Protect.php"; ?>
+ <?php //include"Protect.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Umesh Banjare Sir Classes - Class 10th</title>
-  <!-- Font Awesome CDN for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
-        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer">
-
-  <style>
-    /* ===== General Reset ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    body {
-      background: #f5f5f5;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    /* ===== Header ===== */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #333;
-      color: #fff;
-      padding: 15px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .logo h1 {
-      font-size: 22px;
-    }
-
-    .nav-menu ul {
-      list-style: none;
-      display: flex;
-      gap: 15px;
-    }
-
-    .nav-menu ul li {
-      display: inline-block;
-    }
-
-    .nav-menu ul li a {
-      text-decoration: none;
-      color: #fff;
-      padding: 8px 12px;
-      border-radius: 5px;
-      transition: background 0.3s;
-    }
-
-    .nav-menu ul li a:hover {
-      background: #ff9800;
-    }
-
-    .menu-toggle {
-      display: none;
-      font-size: 22px;
-      cursor: pointer;
-    }
-
-    /* ===== Main Content ===== */
-    main {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    main h2, main h3 {
-      text-align: center;
-      margin-bottom: 15px;
-      color: #222;
-    }
-
-    main p, main strong {
-      margin: 10px 0;
-    }
-
-    u strong {
-      color: #d32f2f;
-    }
-
-    /* ===== Footer ===== */
-    footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 12px 0;
-      margin-top: 30px;
-    }
-
-    /* ===== Responsive ===== */
-    @media (max-width: 768px) {
-      .nav-menu {
-        display: none;
-        width: 100%;
-      }
-
-      .nav-menu ul {
-        flex-direction: column;
-        background: #444;
-        padding: 10px 0;
-      }
-
-      .nav-menu ul li {
-        text-align: center;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .nav-menu.active {
-        display: block;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umesh Banjare sir Classes</title>
+    <!-- Font Awesome CDN for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-  <div class="logo">
-    <h1>Class -10th</h1>
-  </div>
-  <nav class="nav-menu">
+    <header>
+        <div class="logo">
+            <h1>Class -10th</h1>
+        </div>
+         <nav class="nav-menu">
     <ul>
-      <li><a href="index.php"><i class="fa fa-home"></i> Home</a></li>
-      <li><a href="about.php"><i class="fa fa-user"></i> About</a></li>
-      <li><a href="notes.php"><i class="fa fa-book-open"></i> Class-9th</a></li>
-      <li><a href="notes-10th.php"><i class="fa fa-book"></i> Class-10th</a></li>
-      <li><a href="contact.php"><i class="fa fa-envelope"></i> Contact</a></li>
-      <li><a href="admin.php"><i class="fa fa-user-shield"></i> Admin</a></li>
+        <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fa fa-user"></i> About</a></li>
+        <li><a href="notes.html"><i class="fa fa-book-open"></i> Class-9th</a></li>
+        <li><a href="notes-10th.html"><i class="fa fa-book"></i> Class-10th</a></li>
+        <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+        <li><a href="admin.html"><i class="fa fa-user-shield"></i> Admin</a></li>
     </ul>
-  </nav>
-  <div class="menu-toggle">
-    <span>&#9776;</span>
-  </div>
-</header>
-
+</nav>
+        <div class="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+    </header>
 <main>
-  <h2>Employability Skills</h2>
-  <h3>Chapter – 1</h3> 
-  <h3>Methods of Communication</h3><br>
+<h2 align="center">Employability skills</h2>
+  <h3 align="center">Chapter – 1</h3> 
+  <h3 align="center">Methods of Communication </h3><br>
+        
+    
 
-  <strong>I. Multiple Choice Questions (MCQs). Tick() the correct answer.</strong><br><br>
 
-  1. Which of the following is NOT an element of communication process?<br>
-  a. Channel<br>b. Receiver<br>c. Sender<br>d. Graph<br>
-  <b>Answer – d. Graph</b><br><br>
+  <strong>I. Multiple Choice Questions (MCQs). Tick() the correct answer. </strong> <br>
+1. Which of the following is NOT an element of communication process?<br>
+a. Channel<br>
+b. Receiver<br>
+c. Sender<br>
+d. Graph<br>
+Answer – d. graph <br>
 
-  2. Which method of communication will you use to apply for a two days leave from school?<br>
-  a. Poster<br>b. E-mail<br>c. Application<br>d. Newsletter<br>
-  <b>Answer – c. Application</b><br><br>
+2. Which method of communication will you use to apply for a two days leave from school?<br>
+a. Poster<br>
+b. E-mail<br>
+c. Application<br>
+d. Newsletter<br>
+Answer - c. Application<br>
 
-  3. What do you think is the purpose of communication?<br>
-  a. To inform<br>b. To share thoughts, ideas and feelings<br>c. To influence others<br>d. All of these<br>
-  <b>Answer – d. All of these</b><br><br>
+3. What do you think is the purpose of communication?<br>
+a. To inform <br>
+b. To share thoughts, ideas and feelings<br>
+c. To influence others<br>
+d. All of these<br>
+Answer - d. All of these<br>
 
-  4. Which of these is not an element of the nonverbal communication?<br>
-  a. Words<br>b. Gestures<br>c. Expressions<br>d. Posture<br>
-  <b>Answer – a. Words</b><br><br>
+4. Which of these is not an element of the nonverbal communication?<br>
+a. Words<br>
+b. gestures<br>
+c. Expressions<br>
+d. Posture<br>
+Answer- a. Words<br>
 
-  5. Which of these actions a sender cannot use to send his messages?<br>
-  a. Gestures<br>b. Speaking<br>c. Reading<br>d. Writing<br>
-  <b>Answer – c. Reading</b><br><br>
+5. Which of these actions a sender cannot use to send his messages?<br>
+a. Gestures<br>
+b. Speaking<br>
+c. Reading<br>
+d. Writing <br>
+Answer - c. Reading<br>
 
-  6. Which of the following is an example of oral communication?<br>
-  a. Newspapers<br>b. Letters<br>c. Phone call<br>d. E-mail<br>
-  <b>Answer – c. Phone call</b><br><br>
+6. Which of the following is an example of oral communication?<br>
+a. Newspapers<br>
+b. Letters<br>
+c. Phone call<br>
+d. E-mail<br>
+Answer - c. Phone call<br>
 
-  7. What does an upright body posture convey during a conversation?<br>
-  a. Pride<br>b. Confidence<br>c. Humility<br>d. Diffidence<br>
-  <b>Answer – b. Confidence</b><br><br>
+7. What does an upright body posture convey during a conversation?<br>
+a. Pride<br>
+b. Confidence<br>
+c. Humility<br>
+d. Diffidence<br>
+Answer - b. Confidence<br>
+<br>
+<strong>II. Fill in the blanks to complete the following sentences:</strong><br>
+1. The <u><strong>one to one</strong></u> conversation is the best way to communicate a message clearly and effectively. <br>
+2. Many <u><strong>facial</strong></u> expressions are understood in the same way across all cultures.<br>
+3. Transmission of information and ideas through the use of visuals is called <u><strong>visual communication</strong></u> . <br>
+4. Three most commonly used methods of communication are verbal,<u><strong>non-verbal</strong></u> and Visual communication. <br>
+5. The<u><strong> paralanguage</strong></u> refers to the nonverbal elements of voice like voice pitch, rhythm, tempo etc. <br>
+6. The<u><strong> non-verbal </strong></u>communication takes place through facial expressions, gestures etc.<br>
+<br>
+<strong>III. Short Answer Questions.</strong><br>
+<strong>1. What is the meaning of verbal communication?<br>
+Answer – </strong><br>
+When communication takes place with the help of words (spoken are written), it is referred to as the verbal communication. Language  plays a very important role in verbal communication. <br>
 
-  <strong>II. Fill in the blanks to complete the following sentences:</strong><br><br>
-  1. The <u><strong>one to one</strong></u> conversation is the best way to communicate a message clearly and effectively. <br>
-  2. Many <u><strong>facial</strong></u> expressions are understood in the same way across all cultures.<br>
-  3. Transmission of information and ideas through the use of visuals is called <u><strong>visual communication</strong></u>.<br>
-  4. Three most commonly used methods of communication are verbal, <u><strong>non-verbal</strong></u> and visual communication.<br>
-  5. The <u><strong>paralanguage</strong></u> refers to the nonverbal elements of voice like pitch, rhythm, tempo etc.<br>
-  6. The <u><strong>non-verbal</strong></u> communication takes place through facial expressions, gestures etc.<br><br>
+<strong>2. How is verbal communication different from non-verbal communication?<br>
+Answer -</strong><br> 
+Verbal communication uses spoken or written words to convey messages, while non-verbal communication involves body language, facial expressions, gestures, and tone of voice. Verbal focuses on language, whereas non-verbal expresses emotions and supports or sometimes replaces spoken words.<br>
 
-  <strong>III. Short Answer Questions.</strong><br><br>
+<strong>3. List down a few limitations of non-verbal communication.<br>
+Answer – </strong><br>
+A few limitations of non-verbal communication – <br>
+1.	It is quit vague and imprecise. <br>
+2.	Long conversation and necessary explanation are not possible.<br> 
+3.	Some time non verbal may become difficult to understand. <br>
+<strong>4. What is visual communication? Give two examples of visual communication.<br>
+Answer – </strong><br>
+visual communication or graphic communication is the third most important method of communication. It can be defined as the transmission of Information and ideas using signs, symbols, photographs, tables, images, drawings, videos and animation. <br>
 
-  <strong>1. What is the meaning of verbal communication?<br>Answer –</strong><br>
-  When communication takes place with the help of words (spoken or written), it is referred to as verbal communication. Language plays a very important role.<br><br>
+<strong>5. List two limitations of visual communication?<br>
+Answer –</strong><br> 
+Two limitations of visual communication are – <br>
+1.Visual communication is costly <br>
+2.Complete and detailed information cannot be presented using this method. <br>
 
-  <strong>2. How is verbal communication different from non-verbal communication?<br>Answer –</strong><br>
-  Verbal communication uses spoken/written words, while non-verbal uses body language, expressions, gestures, and tone. Verbal = language; Non-verbal = emotions/support.<br><br>
+<strong>6. What is paralanguage in non-verbal communication?<br>
+Answer </strong>–<br> 
+Paralanguage refers to the nonverbal elements of the voice. This includes vocal qualities such as pitch,  Rhythm, Tempo, resonance control, pace and the use of voice segregates such as “aah”, “um”, etc. <br>
 
-  <strong>3. List down a few limitations of non-verbal communication.<br>Answer –</strong><br>
-  1. It is quite vague and imprecise.<br>
-  2. Long conversations or detailed explanations not possible.<br>
-  3. Sometimes it may be difficult to understand.<br><br>
-
-  <strong>4. What is visual communication? Give two examples.<br>Answer –</strong><br>
-  Visual communication = transmission of ideas via signs, symbols, photos, tables, drawings, videos. Examples: Charts, Maps.<br><br>
-
-  <strong>5. List two limitations of visual communication?<br>Answer –</strong><br>
-  1. It can be costly.<br>
-  2. Complete information cannot always be conveyed.<br><br>
-
-  <strong>6. What is paralanguage in non-verbal communication?<br>Answer –</strong><br>
-  Paralanguage = nonverbal voice elements: pitch, rhythm, tempo, resonance, pace, fillers like "um", "aah".<br>
 </main>
 
-<footer>
-  <p>&copy; <b>2025 Banjare Sir Classes. All rights reserved. Developed by Umesh Banjare.</b></p>
+     <footer style="background-color: #333; color: #fff; text-align: center; padding: 10px 0; width: 100%;">
+    <p>&copy; <b>2025 Banjare sir Classes. All rights reserved. Developed by Umesh Banjare.</b></p>
 </footer>
 
-<script>
-  // Responsive nav toggle
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navMenu = document.querySelector('.nav-menu');
-  menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-  });
-</script>
-
+    <script src="script.js" defer></script>
 </body>
-</html>
+</html
