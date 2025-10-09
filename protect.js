@@ -1,11 +1,11 @@
-// 🔒 Website Content Protection Script
+// 🔒 Full Website Content Protection (Desktop + Mobile)
 
-// 1️⃣ Disable right-click
+// 1️⃣ Disable right-click (desktop)
 document.addEventListener("contextmenu", function(e){
   e.preventDefault();
 });
 
-// 2️⃣ Block common shortcut keys (Ctrl+U, Ctrl+C, Ctrl+S, Ctrl+Shift+I, F12)
+// 2️⃣ Block common keyboard shortcuts (desktop)
 document.onkeydown = function(e) {
   if (
     e.keyCode === 123 || // F12
@@ -19,7 +19,7 @@ document.onkeydown = function(e) {
   }
 };
 
-// 3️⃣ Try to detect Developer Tools (Inspect Element)
+// 3️⃣ Detect Developer Tools (desktop)
 (function() {
   const element = new Image();
   Object.defineProperty(element, 'id', {
@@ -30,3 +30,25 @@ document.onkeydown = function(e) {
   });
   console.log(element);
 })();
+
+// 4️⃣ Disable text selection and long-press (desktop + mobile)
+(function() {
+  const css = `
+    body, img, a {
+      -webkit-user-select: none !important;
+      -moz-user-select: none !important;
+      -ms-user-select: none !important;
+      user-select: none !important;
+      -webkit-touch-callout: none !important; /* iOS Safari */
+    }
+  `;
+  const style = document.createElement('style');
+  style.type = 'text/css';
+  style.appendChild(document.createTextNode(css));
+  document.head.appendChild(style);
+})();
+
+// 5️⃣ Disable touch-based long-press menu (mobile)
+document.addEventListener("touchstart", function(e){
+  e.preventDefault(); // Prevent long-press menu
+}, {passive: false});
