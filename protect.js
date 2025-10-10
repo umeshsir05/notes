@@ -20,15 +20,7 @@ document.addEventListener("keydown", function(e) {
   }
 });
 
-// 3️⃣ Disable text selection (desktop + mobile)
-document.addEventListener("selectstart", function(e){
-  e.preventDefault();
-});
 
-// 4️⃣ Disable touch-based long-press menu (mobile)
-document.addEventListener("touchstart", function(e){
-  e.preventDefault();
-}, {passive: false});
 
 // 5️⃣ Disable drag (images / links)
 document.addEventListener("dragstart", function(e){
