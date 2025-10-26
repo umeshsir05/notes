@@ -3,16 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <!-- Font Awesome CDN for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="style.css">
+    <title>About Us | Umesh Sir Classes</title>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(90deg, #0072ff, #00c6ff);
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-menu ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .nav-menu ul li a:hover {
+            color: #ffe600;
+            transform: scale(1.1);
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 28px;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            max-width: 1000px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        main h1 {
+            text-align: center;
+            color: #0072ff;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        main h2 {
+            color: #0072ff;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.4rem;
+        }
+
+        main p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        main ul {
+            margin: 10px 0 20px 20px;
+        }
+
+        main ul li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        main ul li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #00c6ff;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        footer b {
+            color: #00c6ff;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .nav-menu ul {
+                flex-direction: column;
+                display: none;
+                width: 100%;
+                background: #0072ff;
+                text-align: center;
+                margin-top: 15px;
+                border-radius: 10px;
+                padding: 10px 0;
+            }
+
+            .nav-menu.active ul {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+                color: #fff;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1>Umesh Sir Classes</h1>
-        </div>
+        <div class="logo"><h1><i class="fa-solid fa-graduation-cap"></i> Umesh Sir Classes</h1></div>
+
         <nav class="nav-menu">
             <ul>
                 <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
@@ -23,41 +171,46 @@
                 <li><a href="resource.html"><i class="fa fa-user-shield"></i> Resources</a></li>
             </ul>
         </nav>
-        <div class="menu-toggle">
-            <span>&#9776;</span>
-        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()"><i class="fa fa-bars"></i></div>
     </header>
+
     <main>
-        <h1>About Us</h1>
-        <p>Welcome to our Umesh sir classes website! We are dedicated to helping individuals improve their programming and web development skills, whether you're a beginner or looking to refine your programming and web development abilities.This website has been developed by Umesh Banjare sir.</p>
+        <h1><i class="fa-solid fa-users"></i> About Us</h1>
 
-        <h2>Our Mission</h2>
-        <p>Our mission is to make learning IT easy, accessible, and enjoyable for everyone. We believe that IT is a powerful tool for personal and professional growth, and we aim to provide effective resources for mastering programming and web development also.</p>
+        <p>Welcome to <b>Umesh Sir Classes</b>! We are dedicated to helping students improve their <b>programming and web development</b> skills — whether you’re a complete beginner or looking to sharpen your expertise. This platform is created and managed by <b>Umesh Banjare Sir</b> with the goal of making learning practical and enjoyable.</p>
 
-        <h2>Why Choose Us?</h2>
+        <h2><i class="fa-solid fa-bullseye"></i> Our Mission</h2>
+        <p>Our mission is to make learning IT simple, accessible, and fun for everyone. We believe technology is a gateway to opportunity, and we aim to help learners master coding, web development, and IT fundamentals efficiently.</p>
+
+        <h2><i class="fa-solid fa-star"></i> Why Choose Us?</h2>
         <ul>
-            <li>Experienced instructors who are passionate about programming and web development.</li>
-            <li>Interactive lessons and activities designed to improve programming and web development.</li>
-            <li>Flexible learning schedules to suit your needs.</li>
-            <li>Supportive community of learners and experts.</li>
+            <li>Experienced instructors passionate about IT and teaching.</li>
+            <li>Interactive lessons and hands-on projects.</li>
+            <li>Flexible learning schedules that suit your lifestyle.</li>
+            <li>A growing, supportive learning community.</li>
         </ul>
 
-        <h2>Our Approach</h2>
-        <p>We focus on practical communication skills that help you speak English with confidence. Our approach includes:</p>
+        <h2><i class="fa-solid fa-chalkboard-user"></i> Our Approach</h2>
+        <p>We believe in *learning by doing*. That’s why our approach includes:</p>
         <ul>
-            <li>One-on-one speaking practice sessions</li>
-            <li>Group discussions and debates</li>
-            <li>Listening and pronunciation exercises</li>
-            <li>Real-world scenarios for practical learning</li>
+            <li>Practical projects and coding exercises.</li>
+            <li>Group discussions and collaborative problem-solving.</li>
+            <li>Focus on clear explanations and real-world applications.</li>
         </ul>
 
-        <h2>Join Us Today!</h2>
-        <p>Start your journey towards mastering spoken English with us. Whether you're preparing for a job interview, traveling, or just want to improve your skills, we're here to help you every step of the way!</p>
+        <h2><i class="fa-solid fa-handshake-angle"></i> Join Us Today!</h2>
+        <p>Start your learning journey with <b>Umesh Sir Classes</b> today. Whether you’re aiming for better job opportunities or want to level up your tech skills — we’re here to guide you every step of the way!</p>
     </main>
-    <footer style="background-color: #333; color: #fff; text-align: center; padding: 10px 0; width: 100%;">
-        <p>&copy; <b>2025 Banjare sir Classes. All rights reserved. Developed by Umesh Banjare.</b></p>
+
+    <footer>
+        <p>&copy; 2025 <b>Banjare Sir Classes</b>. All Rights Reserved. | Developed by <b>Umesh Banjare</b></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
