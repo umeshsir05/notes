@@ -274,3 +274,8 @@ footer {
     margin: 0;
     padding: 0;
 }
+
+      /* Icon Colors */
+        .fa-users, .fa-bullseye, .fa-star, .fa-chalkboard-user, .fa-handshake-angle {
+            color: #00c6ff;
+        }
