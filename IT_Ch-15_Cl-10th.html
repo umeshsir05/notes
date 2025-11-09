@@ -101,39 +101,110 @@ T<br>
 <br><br>
 
 <strong>III. Short Answer Questions:</strong><br><br>
-
 1.Define each of the following:<br>
   a. RDBMS  b. Table  c. Report  d. Query<br>
 <b>Answer-</b><br>
-
+<b>a. RDBMS - </b><br>
+RDBMS (Relational Database Management System )  is a type of database management system that allows us to create and work with the relational database. 
+<b>b.Table - </b><br>
+A table is a group of related records. Tables are frequently classified by the application for which they are primarily used. 
+<br>
+<b>c. Report- </b>
+Report is a database object that allows us to present data from a table or query table in a printable format. 
+<br>
+<b>d. Query- </b>
+Queries are database objects that we create to extract selected data from the database tables. 
+<br>
 2.What are the advantages of using a Database Management System?<br>
 <b>Answer-</b><br>
+Advantages of a Database are - <br>
+<b>1.Facilitate Sharing of Data:</b> Multiple users can use the same centrally stored data simultaneously for different purposes.
+<b>2.Prevent Duplication of Data: </b>Centralized storage minimizes repeated or duplicate data entries.
+<b>3.Ensure Data Consistency:</b> No data duplication; all users see the same updated data.
+<b>4.Make Data Validation Possible:</b> Tools ensure data correctness and reduce errors.
+<b>5.Ensure Data Security:</b> Only authorized users can access data using authentication.
+<b>6.Ensure Confidentiality:</b> Access is limited to authorized users as per privacy rules.
 
-3.State the relationship between the various components of the Table - Data items, records, and fields.<br>
+<b>3.State the relationship between the various components of the Table - Data items, records, and fields.</b><br>
 <b>Answer-</b><br>
+Relationship between Data Items, Fields, and Records:<br>
+Data Item:<br> It is the smallest unit of data, such as a single value (e.g., a student’s name or roll number).<br>
+Field: <br>A field is a column in a table that contains a specific type of data for all records (e.g., Name, Age, Class).<br>
+Record:<br> A record is a complete set of related fields that represents one entry in the table (e.g., details of one student).<br>
+ Relationship:<br>
+Many data items form a field, and several fields together form a record in a database table.<br><br>
 
-4.Which are the different methods you can use create a table in LibreOffice Base?<br>
+
+<b>4.Which are the different methods you can use create a table in LibreOffice Base?</b><br>
 <b>Answer-</b><br>
+Different methods to create a table in LibreOffice Base:  <br>
+1.Create Table in Design View:  <br>
+You can manually define field names, data types, and properties.  
+Allows full control over the table structure.  <br>
+2.Create Table using Wizard:  <br>
+Provides step-by-step guidance to select fields from sample tables and set primary keys easily. <br> 
+3.Create Table in SQL View:  <br>
+You can write SQL commands (like CREATE TABLE) to design the table manually using SQL syntax.  <br>
 
-5.What is a primary key? Explain with the help of a suitable example.<br>
+<b>5.What is a primary key? Explain with the help of a suitable example.</b><br>
 <b>Answer-</b><br>
-
-6.What is a query? State any one advantage of using a query in a database.<br>
+A primary key is a field or column in a database table that identifies each record in the table uniquely.  
+Example:  <br>
+In a Student table:  <br>
+    <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <th>Roll_No</th>
+            <th>Name</th>
+            <th>Class</th>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>Ravi</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>Sita</td>
+            <td>10</td>
+        </tr>
+    </table><br>
+Here, Roll_No is the Primary Key because each student has a unique roll number.  <br>
+<br>
+<b>6.What is a query? State any one advantage of using a query in a database.</b><br>
 <b>Answer-</b><br>
-
-7.What is a form? List any two of its advantages.<br>
+Queries are database objects that we create to extract selected data from the database tables. The design view of the LibreOffice Base allows us to criteria for extracting selective data from database tables in the form of query tables. <br>
+ <br>
+Advantage:  <br>
+A query allows users to quickly find and view specific data from large databases, saving time and effort.  <br>
+<b>7.What is a form? List any two of its advantages.</b><br>
 <b>Answer-</b><br>
+A form is an important component of a database. It is always linked to the Table (or query) object. It provides an easy interface to the user to modify and insert regards. Any changes that a user makes to the data in a form also get reflected related table or query table. <br>Advantages:  <br>
+1. Makes data entry easier with text boxes, dropdowns, and buttons.  <br>
+2. Helps reduce errors by providing a controlled way to input data.  <br>
 
-8.What is a report? List different ways of creating a report in LibreOffice Base.<br>
+<b>8.What is a report? List different ways of creating a report in LibreOffice Base.</b><br>
 <b>Answer-</b><br>
+Report is a database object that allows us to present data from a table or query table in a printable format. <br>
+Different ways of creating a report in LibreOffice Base:  <br>
 
-9.What is a relationship in context of the LibreOffice Base tables?<br>
+1. Using Report Wizard:  <br>
+Provides step-by-step guidance to create a report quickly.  <br>
+2. Using Report Builder (Design View):  <br>
+Allows users to manually design and customize the report layout.  <br>
+<b>9.What is a relationship in context of the LibreOffice Base tables?</b><br>
 <b>Answer-</b><br>
-
-10.How many types of relationships we can establish between the Base tables?<br>
+When we link one table to the other on the basis of the Primary key, it is called setting a relationship. We can set a relationship between two or more tables. 
+<b>10.How many types of relationships we can establish between the Base tables?</b><br>
 <b>Answer-</b><br>
+In LibreOffice Base, we can establish three types of relationships between tables.  <br>
 
- 
+1. One-to-One Relationship:  <br>
+Each record in one table is linked to only one record in another table. Example - In a school database each student has only one student ID and each student ID is assigned to only one person. <br>
+2. One-to-Many Relationship:  <br>
+A single record in one table can be related to multiple records in another table. Example - Each customer can have many sales orders. <br>
+3. Many-to-Many Relationship:  <br>
+Records in one table can relate to multiple records in another table, and vice versa. Example - Customers can purchase various products and products can be purchased by many customers. <br>
+
 <br><br>
 </main>
 
