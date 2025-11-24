@@ -279,3 +279,45 @@ footer {
         .fa-users, .fa-bullseye, .fa-star, .fa-chalkboard-user, .fa-handshake-angle {
             color: #0078D7;
         }
+
+
+/* Dark Mode Toggle Button */
+.dark-toggle {
+    font-size: 22px;
+    cursor: pointer;
+    margin-left: 15px;
+    color: #333;
+}
+
+.dark-toggle i {
+    transition: 0.3s;
+}
+
+/* Dark Mode Overall */
+body.dark {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+.dark header {
+    background: #1f1f1f;
+}
+
+.dark .nav-menu ul li a {
+    color: #e0e0e0;
+}
+
+.dark .hero {
+    background: #1b1b1b;
+}
+
+.dark .feature {
+    background: #1b1b1b;
+    color: #e0e0e0;
+    border-color: #333;
+}
+
+.dark footer {
+    background: #1f1f1f;
+    color: #e0e0e0;
+}
