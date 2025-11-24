@@ -17,10 +17,6 @@
         <div class="logo">
             <h1>Umesh Sir Classes</h1>
         </div>
-<!-- Dark Mode Toggle -->
-<div class="dark-toggle">
-    <i class="fa-solid fa-moon" id="darkIcon"></i>
-</div>
 
         <!-- Navigation Menu -->
         <nav class="nav-menu">
@@ -110,27 +106,7 @@
         <p>&copy; <b>2025 Banjare sir Classes. All rights reserved. Developed by Umesh Banjare.</b></p>
     </footer>
 
-    <script>
-    const toggle = document.getElementById("darkIcon");
-
-    // Load saved mode
-    if (localStorage.getItem("theme") === "dark") {
-        document.body.classList.add("dark");
-        toggle.classList.replace("fa-moon", "fa-sun");
-    }
-
-    toggle.onclick = () => {
-        document.body.classList.toggle("dark");
-
-        if (document.body.classList.contains("dark")) {
-            toggle.classList.replace("fa-moon", "fa-sun");
-            localStorage.setItem("theme", "dark");
-        } else {
-            toggle.classList.replace("fa-sun", "fa-moon");
-            localStorage.setItem("theme", "light");
-        }
-    };
-</script>
+  
 
 </body>
 </html>
