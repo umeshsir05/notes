@@ -10,8 +10,61 @@
 
     <!-- CSS File -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- DARK MODE CSS (ADDED) -->
+    <style>
+        :root{
+          --bg:#ffffff;
+          --text:#222;
+        }
+        body{
+          background:var(--bg);
+          color:var(--text);
+          transition:0.3s;
+        }
+
+        /* Dark Theme */
+        body.dark{
+          --bg:#0b1220;
+          --text:#e6eef9;
+        }
+
+        /* Toggle style */
+        .toggle{
+          width:55px;
+          height:28px;
+          border-radius:30px;
+          padding:3px;
+          cursor:pointer;
+          background:#ddd;
+          display:flex;
+          align-items:center;
+          position:relative;
+        }
+        body.dark .toggle{
+          background:#333;
+        }
+        .knob{
+          width:22px;
+          height:22px;
+          background:white;
+          border-radius:50%;
+          position:absolute;
+          left:3px;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          font-size:12px;
+          transition:0.3s;
+        }
+        body.dark .knob{
+          left:30px;
+          background:#ffdf6b;
+        }
+    </style>
 </head>
 <body>
+
     <!-- Header -->
     <header>
         <div class="logo">
@@ -21,8 +74,7 @@
         <!-- Navigation Menu -->
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html"><i class="fa-solid fa-house"></i>
- Home</a></li>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
                 <li><a href="about.html"><i class="fa-solid fa-user"></i> About</a></li>
                 <li><a href="notes.html"><i class="fa-solid fa-book-open"></i> Class-9th</a></li>
                 <li><a href="notes-10th.html"><i class="fa-solid fa-book"></i> Class-10th</a></li>
@@ -30,6 +82,13 @@
                 <li><a href="resource.html"><i class="fa-solid fa-shield-halved"></i> Resources</a></li>
             </ul>
         </nav>
+
+        <!-- Dark Mode Toggle (ADDED) -->
+        <div class="toggle" id="themeToggle">
+            <div class="knob" id="themeIcon">
+                <i class="fa-solid fa-moon"></i>
+            </div>
+        </div>
 
         <!-- Mobile Menu Toggle -->
         <div class="menu-toggle">
@@ -82,6 +141,32 @@
     <script src="confetti.js"></script>
     <script src="script.js"></script>
 
+    <!-- DARK MODE SCRIPT (ADDED) -->
+    <script>
+        (function(){
+            const toggle = document.getElementById("themeToggle");
+            const icon = document.getElementById("themeIcon");
+            const body = document.body;
+
+            if(localStorage.getItem("theme") === "dark"){
+                body.classList.add("dark");
+                icon.innerHTML = '<i class="fa-solid fa-sun"></i>';
+            }
+
+            toggle.addEventListener("click", ()=>{
+                body.classList.toggle("dark");
+
+                if(body.classList.contains("dark")){
+                    icon.innerHTML = '<i class="fa-solid fa-sun"></i>';
+                    localStorage.setItem("theme", "dark");
+                } else {
+                    icon.innerHTML = '<i class="fa-solid fa-moon"></i>';
+                    localStorage.setItem("theme", "light");
+                }
+            });
+        })();
+    </script>
+
     <!-- Visitor Counter -->
     <script>
     (function () {
@@ -105,8 +190,6 @@
     <footer style="background-color:#333;color:#fff;text-align:center;padding:10px 0;width:100%;">
         <p>&copy; <b>2025 Banjare sir Classes. All rights reserved. Developed by Umesh Banjare.</b></p>
     </footer>
-
-  
 
 </body>
 </html>
